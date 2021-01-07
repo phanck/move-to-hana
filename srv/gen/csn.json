@@ -1,0 +1,3072 @@
+{
+  "definitions": {
+    "Base": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "Country": {
+      "kind": "type",
+      "@description": "{i18n>CountryCode.Description}",
+      "@title": "{i18n>Country}",
+      "type": "cds.Association",
+      "target": "sap.common.Countries",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Currency": {
+      "kind": "type",
+      "@description": "{i18n>CurrencyCode.Description}",
+      "@title": "{i18n>Currency}",
+      "type": "cds.Association",
+      "target": "sap.common.Currencies",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "kind": "type",
+      "@description": "{i18n>LanguageCode.Description}",
+      "@title": "{i18n>Language}",
+      "type": "cds.Association",
+      "target": "sap.common.Languages",
+      "keys": [
+        {
+          "ref": [
+            "code"
+          ]
+        }
+      ]
+    },
+    "T006": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "MSEHI": {
+          "@title": "MSEHI",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "KZEX3": {
+          "@title": "KZEX3",
+          "type": "cds.String",
+          "length": 1
+        },
+        "KZEX6": {
+          "@title": "KZEX6",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ANDEC": {
+          "@title": "ANDEC",
+          "type": "cds.Integer"
+        },
+        "KZKEH": {
+          "@title": "KZKEH",
+          "type": "cds.String",
+          "length": 1
+        },
+        "KZWOB": {
+          "@title": "KZWOB",
+          "type": "cds.String",
+          "length": 1
+        },
+        "KZ1EH": {
+          "@title": "KZ1EH",
+          "type": "cds.String",
+          "length": 1
+        },
+        "KZ2EH": {
+          "@title": "KZ2EH",
+          "type": "cds.String",
+          "length": 1
+        },
+        "DIMID": {
+          "@title": "DIMID",
+          "type": "cds.String",
+          "length": 6
+        },
+        "ZAEHL": {
+          "@title": "ZAEHL",
+          "type": "cds.Integer"
+        },
+        "NENNR": {
+          "@title": "NENNR",
+          "type": "cds.Integer"
+        },
+        "EXP10": {
+          "@title": "EXP10",
+          "type": "cds.Integer"
+        },
+        "ADDKO": {
+          "@title": "ADDKO",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 6
+        },
+        "EXPON": {
+          "@title": "EXPON",
+          "type": "cds.Integer"
+        },
+        "DECAN": {
+          "@title": "DECAN",
+          "type": "cds.Integer"
+        },
+        "ISOCODE": {
+          "@title": "ISOCODE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "PRIMARY": {
+          "@title": "PRIMARY",
+          "type": "cds.String",
+          "length": 1
+        },
+        "TEMP_VALUE": {
+          "@title": "TEMP_VALUE",
+          "type": "cds.Double"
+        },
+        "TEMP_UNIT": {
+          "@title": "TEMP_UNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "FAMUNIT": {
+          "@title": "FAMUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "PRESS_VAL": {
+          "@title": "PRESS_VAL",
+          "type": "cds.Double"
+        },
+        "PRESS_UNIT": {
+          "@title": "PRESS_UNIT",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "T006A": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "SPRAS": {
+          "@title": "SPRAS",
+          "key": true,
+          "type": "cds.String",
+          "length": 1
+        },
+        "MSEHI": {
+          "@title": "MSEHI",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "KZEX3": {
+          "@title": "KZEX3",
+          "type": "cds.String",
+          "length": 3
+        },
+        "KZEX6": {
+          "@title": "KZEX6",
+          "type": "cds.String",
+          "length": 6
+        },
+        "MSEHT": {
+          "@title": "MSEHT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "MSEHL": {
+          "@title": "MSEHL",
+          "type": "cds.String",
+          "length": 30
+        }
+      }
+    },
+    "TCURC": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "WAERS": {
+          "@title": "WAERS",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "ISOCD": {
+          "@title": "ISOCD",
+          "type": "cds.String",
+          "length": 3
+        },
+        "ALTWR": {
+          "@title": "ALTWR",
+          "type": "cds.String",
+          "length": 3
+        },
+        "GDATU": {
+          "@title": "GDATU",
+          "type": "cds.String",
+          "length": 8
+        },
+        "XPRIMARY": {
+          "@title": "XPRIMARY",
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "TCURF": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "KURST": {
+          "@title": "KURST",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FCURR": {
+          "@title": "FCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "TCURR": {
+          "@title": "TCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "GDATU": {
+          "@title": "GDATU",
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "FFACT": {
+          "@title": "FFACT",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 0
+        },
+        "TFACT": {
+          "@title": "TFACT",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 0
+        },
+        "ABWCT": {
+          "@title": "ABWCT",
+          "type": "cds.String",
+          "length": 4
+        },
+        "ABWGA": {
+          "@title": "ABWGA",
+          "type": "cds.String",
+          "length": 8
+        }
+      }
+    },
+    "TCURN": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "FCURR": {
+          "@title": "FCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "TCURR": {
+          "@title": "TCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "GDATU": {
+          "@title": "GDATU",
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "NOTATION": {
+          "@title": "NOTATION",
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "TCURR": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "KURST": {
+          "@title": "KURST",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FCURR": {
+          "@title": "FCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "TCURR": {
+          "@title": "TCURR",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "GDATU": {
+          "@title": "GDATU",
+          "key": true,
+          "type": "cds.String",
+          "length": 8
+        },
+        "UKURS": {
+          "@title": "UKURS",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 5
+        },
+        "FFACT": {
+          "@title": "FFACT",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 0
+        },
+        "TFACT": {
+          "@title": "TFACT",
+          "type": "cds.Decimal",
+          "precision": 9,
+          "scale": 0
+        }
+      }
+    },
+    "TCURT": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "SPRAS": {
+          "@title": "SPRAS",
+          "key": true,
+          "type": "cds.String",
+          "length": 1
+        },
+        "WAERS": {
+          "@title": "WAERS",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "LTEXT": {
+          "@title": "LTEXT",
+          "type": "cds.String",
+          "length": 40
+        },
+        "KTEXT": {
+          "@title": "KTEXT",
+          "type": "cds.String",
+          "length": 15
+        }
+      }
+    },
+    "TCURV": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "KURST": {
+          "@title": "KURST",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "XINVR": {
+          "@title": "XINVR",
+          "type": "cds.String",
+          "length": 1
+        },
+        "BWAER": {
+          "@title": "BWAER",
+          "type": "cds.String",
+          "length": 5
+        },
+        "XBWRL": {
+          "@title": "XBWRL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "GKUZU": {
+          "@title": "GKUZU",
+          "type": "cds.String",
+          "length": 4
+        },
+        "BKUZU": {
+          "@title": "BKUZU",
+          "type": "cds.String",
+          "length": 4
+        },
+        "XFIXD": {
+          "@title": "XFIXD",
+          "type": "cds.String",
+          "length": 1
+        },
+        "XEURO": {
+          "@title": "XEURO",
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "TCURW": {
+      "kind": "entity",
+      "elements": {
+        "MANDT": {
+          "@title": "MANDT",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "SPRAS": {
+          "@title": "SPRAS",
+          "key": true,
+          "type": "cds.String",
+          "length": 1
+        },
+        "KURST": {
+          "@title": "KURST",
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "CURVW": {
+          "@title": "CURVW",
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "TCURX": {
+      "kind": "entity",
+      "elements": {
+        "CURRKEY": {
+          "@title": "CURRKEY",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "CURRDEC": {
+          "@title": "CURRDEC",
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "User": {
+      "kind": "type",
+      "@description": "{i18n>UserID.Description}",
+      "@title": "{i18n>UserID}",
+      "type": "cds.String",
+      "length": 255
+    },
+    "cuid": {
+      "kind": "type",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        }
+      },
+      "$syntax": "aspect"
+    },
+    "iso_countries_regions": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common_countries.Regions"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "country"
+              ],
+              "as": "COUNTRY_CODE"
+            },
+            {
+              "ref": [
+                "toCountries",
+                "name"
+              ],
+              "as": "COUNTRY_NAME"
+            },
+            {
+              "ref": [
+                "sub_code"
+              ]
+            },
+            {
+              "ref": [
+                "name"
+              ]
+            },
+            {
+              "ref": [
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "COUNTRY_CODE": {
+          "@Common.Label": "{i18n>country}",
+          "@title": "{i18n>country}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "COUNTRY_NAME": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "type": {
+          "@Common.Label": "{i18n>type}",
+          "@title": "{i18n>type}",
+          "type": "cds.String",
+          "length": 80
+        }
+      },
+      "$syntax": "view"
+    },
+    "iso_us_states": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common_countries.Regions"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "sub_code"
+              ]
+            },
+            {
+              "ref": [
+                "name"
+              ]
+            }
+          ],
+          "where": [
+            {
+              "ref": [
+                "country"
+              ]
+            },
+            "=",
+            {
+              "val": "US"
+            },
+            "and",
+            {
+              "ref": [
+                "type"
+              ]
+            },
+            "=",
+            {
+              "val": "State"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        }
+      },
+      "$syntax": "view"
+    },
+    "iso_us_states_and_territories": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common_countries.Regions"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "sub_code"
+              ]
+            },
+            {
+              "ref": [
+                "name"
+              ]
+            }
+          ],
+          "where": [
+            {
+              "ref": [
+                "country"
+              ]
+            },
+            "=",
+            {
+              "val": "US"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        }
+      },
+      "$syntax": "view"
+    },
+    "localized.iso_countries_regions": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "localized.sap.common_countries.Regions"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "country"
+              ],
+              "as": "COUNTRY_CODE"
+            },
+            {
+              "ref": [
+                "toCountries",
+                "name"
+              ],
+              "as": "COUNTRY_NAME"
+            },
+            {
+              "ref": [
+                "sub_code"
+              ]
+            },
+            {
+              "ref": [
+                "name"
+              ]
+            },
+            {
+              "ref": [
+                "type"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "COUNTRY_CODE": {
+          "@Common.Label": "{i18n>country}",
+          "@title": "{i18n>country}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "COUNTRY_NAME": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "type": {
+          "@Common.Label": "{i18n>type}",
+          "@title": "{i18n>type}",
+          "type": "cds.String",
+          "length": 80
+        }
+      }
+    },
+    "localized.opensap.MD.Addresses": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "opensap.MD.Addresses"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "@title": "{i18n>addressId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "validFrom": {
+          "@cds.valid.from": true,
+          "@title": "{i18n>validFrom}",
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "@title": "{i18n>validTo}",
+          "type": "cds.Timestamp"
+        },
+        "city": {
+          "@title": "{i18n>city}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "postalCode": {
+          "@title": "{i18n>postalCode}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "street": {
+          "@title": "{i18n>street}",
+          "type": "cds.String",
+          "length": 60
+        },
+        "building": {
+          "@title": "{i18n>building}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "country": {
+          "@title": "{i18n>country}",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.sap.common.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "region": {
+          "@title": "{i18n>region}",
+          "type": "cds.String",
+          "length": 4
+        },
+        "addressType": {
+          "@title": "{i18n>addressType}",
+          "type": "cds.String",
+          "length": 2
+        },
+        "latitude": {
+          "@title": "{i18n>latitude}",
+          "type": "cds.Double"
+        },
+        "longitude": {
+          "@title": "{i18n>longitude}",
+          "type": "cds.Double"
+        }
+      }
+    },
+    "localized.opensap.MD.BusinessPartners": {
+      "kind": "entity",
+      "@description": "{i18n>businessParnters}",
+      "@odata.draft.enabled": false,
+      "@title": "{i18n>businessParnters}",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "opensap.MD.BusinessPartners"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "@description": "{i18n>partnerId}",
+          "@title": "{i18n>partnerId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedAt}",
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedBy}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedAt}",
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedBy}",
+          "type": "User",
+          "length": 255
+        },
+        "partnerRole": {
+          "@assert.enum": true,
+          "@description": "{i18n>partnerRole}",
+          "@title": "{i18n>partnerRole}",
+          "type": "opensap.MD.PartnerRole",
+          "default": {
+            "val": 1
+          }
+        },
+        "email": {
+          "@assert.format": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+          "@title": "{i18n>email}",
+          "type": "opensap.common.Email",
+          "length": 255
+        },
+        "phoneNumber": {
+          "@assert.format": "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))",
+          "@title": "{i18n>phoneNumber}",
+          "type": "opensap.common.PhoneNumber",
+          "length": 30
+        },
+        "webAddress": {
+          "@description": "{i18n>web}",
+          "@title": "{i18n>web}",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "address": {
+          "@cascade.all": true,
+          "@description": "{i18n>address}",
+          "@title": "{i18n>address}",
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.opensap.MD.Addresses",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "companyName": {
+          "@description": "{i18n>company}",
+          "@title": "{i18n>company}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "legalForm": {
+          "@description": "{i18n>legal}",
+          "@title": "{i18n>legal}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "currency": {
+          "@description": "{i18n>CurrencyCode.Description}",
+          "@title": "{i18n>Currency}",
+          "type": "Currency",
+          "target": "localized.sap.common.Currencies",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "createdByEmployee": {
+          "@readonly": true,
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.opensap.MD.Employees",
+          "on": [
+            {
+              "ref": [
+                "createdByEmployee",
+                "email"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "createdBy"
+              ]
+            }
+          ]
+        },
+        "modifiedByEmployee": {
+          "@readonly": true,
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.opensap.MD.Employees",
+          "on": [
+            {
+              "ref": [
+                "modifiedByEmployee",
+                "email"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "modifiedBy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "localized.opensap.MD.Employees": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "opensap.MD.Employees"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*"
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "@title": "{i18n>employeeId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "validFrom": {
+          "@cds.valid.from": true,
+          "@title": "{i18n>validFrom}",
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "@title": "{i18n>validTo}",
+          "type": "cds.Timestamp"
+        },
+        "nameFirst": {
+          "@title": "{i18n>fname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "@title": "{i18n>mname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "@title": "{i18n>lname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "@title": "{i18n>initials}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "sex": {
+          "@assert.enum": true,
+          "@description": "{i18n>gender}",
+          "@title": "{i18n>gender}",
+          "type": "opensap.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "@title": "{i18n>language}",
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "@assert.format": "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))",
+          "@title": "{i18n>phoneNumber}",
+          "type": "opensap.common.PhoneNumber",
+          "length": 30
+        },
+        "email": {
+          "@assert.format": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+          "@title": "{i18n>email}",
+          "type": "opensap.common.Email",
+          "length": 255
+        },
+        "loginName": {
+          "@title": "{i18n>loginName}",
+          "type": "cds.String",
+          "length": 12
+        },
+        "address": {
+          "@cascade.all": true,
+          "@title": "{i18n>address}",
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.opensap.MD.Addresses",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "currency": {
+          "@description": "{i18n>CurrencyCode.Description}",
+          "@title": "{i18n>Currency}",
+          "type": "Currency",
+          "target": "localized.sap.common.Currencies",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "salaryAmount": {
+          "@title": "{i18n>salaryAmount}",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "accountNumber": {
+          "@title": "{i18n>accountNumber}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "bankId": {
+          "@title": "{i18n>bankId}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "bankName": {
+          "@title": "{i18n>bankName}",
+          "type": "cds.String",
+          "length": 255
+        },
+        "employeePicUrl": {
+          "@title": "{i18n>employeePicUrl}",
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "localized.sap.common.Countries": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common.Countries"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*",
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "name"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "name"
+                  ]
+                }
+              ],
+              "as": "name"
+            },
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "descr"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "descr"
+                  ]
+                }
+              ],
+              "as": "descr"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "name": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>CountryCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "code1": {
+          "@Common.Label": "{i18n>code1}",
+          "@title": "{i18n>code1}",
+          "type": "cds.Integer"
+        },
+        "alpha3": {
+          "@Common.Label": "{i18n>alpha3}",
+          "@title": "{i18n>alpha3}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "iso": {
+          "@Common.Label": "{i18n>iso}",
+          "@title": "{i18n>iso}",
+          "type": "cds.String",
+          "length": 16
+        },
+        "region": {
+          "@Common.Label": "{i18n>region}",
+          "@title": "{i18n>region}",
+          "type": "cds.String",
+          "length": 20
+        },
+        "sub_region": {
+          "@Common.Label": "{i18n>sub_region}",
+          "@title": "{i18n>sub_region}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "region_code": {
+          "@Common.Label": "{i18n>region_code}",
+          "@title": "{i18n>region_code}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "sub_region_code": {
+          "@Common.Label": "{i18n>sub_region_code}",
+          "@title": "{i18n>sub_region_code}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "regions": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "localized.sap.common_countries.Regions",
+          "on": [
+            {
+              "ref": [
+                "regions",
+                "country"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self",
+                "code"
+              ]
+            }
+          ]
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Countries_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Countries_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "localized.sap.common.Currencies": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common.Currencies"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*",
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "name"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "name"
+                  ]
+                }
+              ],
+              "as": "name"
+            },
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "descr"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "descr"
+                  ]
+                }
+              ],
+              "as": "descr"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "name": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>CurrencyCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "symbol": {
+          "@title": "{i18n>CurrencySymbol}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "numcode": {
+          "type": "cds.Integer"
+        },
+        "exponent": {
+          "type": "cds.Integer"
+        },
+        "minor": {
+          "type": "cds.String"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Currencies_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Currencies_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "localized.sap.common.Languages": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common.Languages"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*",
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "name"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "name"
+                  ]
+                }
+              ],
+              "as": "name"
+            },
+            {
+              "func": "coalesce",
+              "args": [
+                {
+                  "ref": [
+                    "L",
+                    "localized",
+                    "descr"
+                  ]
+                },
+                {
+                  "ref": [
+                    "L",
+                    "descr"
+                  ]
+                }
+              ],
+              "as": "descr"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "name": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@Core.Computed": true,
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Languages_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Languages_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "localized.sap.common_countries.Regions": {
+      "kind": "entity",
+      "@odata.draft.enabled": false,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "sap.common_countries.Regions"
+            ],
+            "as": "L"
+          },
+          "columns": [
+            "*"
+          ]
+        }
+      },
+      "elements": {
+        "country": {
+          "@Common.Label": "{i18n>country}",
+          "@title": "{i18n>country}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "toCountries": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "localized.sap.common.Countries",
+          "on": [
+            {
+              "ref": [
+                "toCountries",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self",
+                "country"
+              ]
+            }
+          ]
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "type": {
+          "@Common.Label": "{i18n>type}",
+          "@title": "{i18n>type}",
+          "type": "cds.String",
+          "length": 80
+        }
+      }
+    },
+    "managed": {
+      "kind": "type",
+      "elements": {
+        "createdAt": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedAt}",
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedBy}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedAt}",
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedBy}",
+          "type": "User",
+          "length": 255
+        }
+      },
+      "$syntax": "aspect"
+    },
+    "opensap.MD.Addresses": {
+      "kind": "entity",
+      "includes": [
+        "cuid",
+        "temporal"
+      ],
+      "elements": {
+        "ID": {
+          "@title": "{i18n>addressId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "validFrom": {
+          "@cds.valid.from": true,
+          "@title": "{i18n>validFrom}",
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "@title": "{i18n>validTo}",
+          "type": "cds.Timestamp"
+        },
+        "city": {
+          "@title": "{i18n>city}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "postalCode": {
+          "@title": "{i18n>postalCode}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "street": {
+          "@title": "{i18n>street}",
+          "type": "cds.String",
+          "length": 60
+        },
+        "building": {
+          "@title": "{i18n>building}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "country": {
+          "@title": "{i18n>country}",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "sap.common.Countries",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "region": {
+          "@title": "{i18n>region}",
+          "type": "cds.String",
+          "length": 4
+        },
+        "addressType": {
+          "@title": "{i18n>addressType}",
+          "type": "cds.String",
+          "length": 2
+        },
+        "latitude": {
+          "@title": "{i18n>latitude}",
+          "type": "cds.Double"
+        },
+        "longitude": {
+          "@title": "{i18n>longitude}",
+          "type": "cds.Double"
+        }
+      }
+    },
+    "opensap.MD.BPAddrExt": {
+      "kind": "entity",
+      "@description": "{i18n>businessParnters}",
+      "@title": "{i18n>businessParnters}",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "opensap.MD.BusinessPartners"
+            ]
+          },
+          "columns": [
+            {
+              "ref": [
+                "ID"
+              ]
+            },
+            {
+              "xpr": [
+                {
+                  "ref": [
+                    "address",
+                    "street"
+                  ]
+                },
+                "||",
+                {
+                  "val": ", "
+                },
+                "||",
+                {
+                  "ref": [
+                    "address",
+                    "city"
+                  ]
+                }
+              ],
+              "as": "FULLADDRESS"
+            }
+          ]
+        }
+      },
+      "elements": {
+        "ID": {
+          "@description": "{i18n>partnerId}",
+          "@title": "{i18n>partnerId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "FULLADDRESS": {
+          "@Core.Computed": true
+        }
+      },
+      "$syntax": "view"
+    },
+    "opensap.MD.BusinessPartners": {
+      "kind": "entity",
+      "@description": "{i18n>businessParnters}",
+      "@title": "{i18n>businessParnters}",
+      "includes": [
+        "cuid",
+        "managed"
+      ],
+      "elements": {
+        "ID": {
+          "@description": "{i18n>partnerId}",
+          "@title": "{i18n>partnerId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "createdAt": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@odata.on.insert": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedAt}",
+          "type": "cds.Timestamp"
+        },
+        "createdBy": {
+          "@Core.Immutable": true,
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.insert": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>CreatedBy}",
+          "type": "User",
+          "length": 255
+        },
+        "modifiedAt": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$now"
+          },
+          "@cds.on.update": {
+            "=": "$now"
+          },
+          "@odata.on.update": {
+            "#": "now"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedAt}",
+          "type": "cds.Timestamp"
+        },
+        "modifiedBy": {
+          "@UI.HiddenFilter": true,
+          "@cds.on.insert": {
+            "=": "$user"
+          },
+          "@cds.on.update": {
+            "=": "$user"
+          },
+          "@description": "{i18n>UserID.Description}",
+          "@odata.on.update": {
+            "#": "user"
+          },
+          "@readonly": true,
+          "@title": "{i18n>ChangedBy}",
+          "type": "User",
+          "length": 255
+        },
+        "partnerRole": {
+          "@assert.enum": true,
+          "@description": "{i18n>partnerRole}",
+          "@title": "{i18n>partnerRole}",
+          "type": "opensap.MD.PartnerRole",
+          "default": {
+            "val": 1
+          }
+        },
+        "email": {
+          "@assert.format": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+          "@title": "{i18n>email}",
+          "type": "opensap.common.Email",
+          "length": 255
+        },
+        "phoneNumber": {
+          "@assert.format": "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))",
+          "@title": "{i18n>phoneNumber}",
+          "type": "opensap.common.PhoneNumber",
+          "length": 30
+        },
+        "webAddress": {
+          "@description": "{i18n>web}",
+          "@title": "{i18n>web}",
+          "type": "cds.String",
+          "length": 1024
+        },
+        "address": {
+          "@cascade.all": true,
+          "@description": "{i18n>address}",
+          "@title": "{i18n>address}",
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "opensap.MD.Addresses",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "companyName": {
+          "@description": "{i18n>company}",
+          "@title": "{i18n>company}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "legalForm": {
+          "@description": "{i18n>legal}",
+          "@title": "{i18n>legal}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "currency": {
+          "@description": "{i18n>CurrencyCode.Description}",
+          "@title": "{i18n>Currency}",
+          "type": "Currency",
+          "target": "sap.common.Currencies",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "createdByEmployee": {
+          "@readonly": true,
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "opensap.MD.Employees",
+          "on": [
+            {
+              "ref": [
+                "createdByEmployee",
+                "email"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "createdBy"
+              ]
+            }
+          ]
+        },
+        "modifiedByEmployee": {
+          "@readonly": true,
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "opensap.MD.Employees",
+          "on": [
+            {
+              "ref": [
+                "modifiedByEmployee",
+                "email"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "modifiedBy"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "opensap.MD.Employees": {
+      "kind": "entity",
+      "includes": [
+        "cuid",
+        "temporal"
+      ],
+      "elements": {
+        "ID": {
+          "@title": "{i18n>employeeId}",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "validFrom": {
+          "@cds.valid.from": true,
+          "@title": "{i18n>validFrom}",
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "@title": "{i18n>validTo}",
+          "type": "cds.Timestamp"
+        },
+        "nameFirst": {
+          "@title": "{i18n>fname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameMiddle": {
+          "@title": "{i18n>mname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "@title": "{i18n>lname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameInitials": {
+          "@title": "{i18n>initials}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "sex": {
+          "@assert.enum": true,
+          "@description": "{i18n>gender}",
+          "@title": "{i18n>gender}",
+          "type": "opensap.common.Gender",
+          "length": 1
+        },
+        "language": {
+          "@title": "{i18n>language}",
+          "type": "cds.String",
+          "length": 1
+        },
+        "phoneNumber": {
+          "@assert.format": "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))",
+          "@title": "{i18n>phoneNumber}",
+          "type": "opensap.common.PhoneNumber",
+          "length": 30
+        },
+        "email": {
+          "@assert.format": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+          "@title": "{i18n>email}",
+          "type": "opensap.common.Email",
+          "length": 255
+        },
+        "loginName": {
+          "@title": "{i18n>loginName}",
+          "type": "cds.String",
+          "length": 12
+        },
+        "address": {
+          "@cascade.all": true,
+          "@title": "{i18n>address}",
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "opensap.MD.Addresses",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        "currency": {
+          "@description": "{i18n>CurrencyCode.Description}",
+          "@title": "{i18n>Currency}",
+          "type": "Currency",
+          "target": "sap.common.Currencies",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "salaryAmount": {
+          "@title": "{i18n>salaryAmount}",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "accountNumber": {
+          "@title": "{i18n>accountNumber}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "bankId": {
+          "@title": "{i18n>bankId}",
+          "type": "cds.String",
+          "length": 10
+        },
+        "bankName": {
+          "@title": "{i18n>bankName}",
+          "type": "cds.String",
+          "length": 255
+        },
+        "employeePicUrl": {
+          "@title": "{i18n>employeePicUrl}",
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "opensap.MD.NewYorkEmployees": {
+      "kind": "entity",
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "opensap.MD.Employees"
+            ],
+            "as": "emp"
+          },
+          "columns": [
+            {
+              "ref": [
+                "nameFirst"
+              ]
+            },
+            {
+              "ref": [
+                "nameLast"
+              ]
+            },
+            {
+              "ref": [
+                "address",
+                "ID"
+              ],
+              "as": "ADDID"
+            },
+            {
+              "ref": [
+                "address",
+                "city"
+              ],
+              "as": "CITY"
+            }
+          ],
+          "where": [
+            {
+              "val": "New York"
+            },
+            "=",
+            {
+              "ref": [
+                "address",
+                "city"
+              ]
+            }
+          ]
+        }
+      },
+      "elements": {
+        "nameFirst": {
+          "@title": "{i18n>fname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "nameLast": {
+          "@title": "{i18n>lname}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "ADDID": {
+          "@title": "{i18n>addressId}",
+          "type": "cds.UUID"
+        },
+        "CITY": {
+          "@title": "{i18n>city}",
+          "type": "cds.String",
+          "length": 40
+        }
+      },
+      "$syntax": "view"
+    },
+    "opensap.MD.PartnerRole": {
+      "kind": "type",
+      "type": "cds.Integer",
+      "enum": {
+        "Customer": {
+          "val": 1
+        },
+        "Supplier": {
+          "val": 2
+        }
+      }
+    },
+    "opensap.common": {
+      "kind": "context"
+    },
+    "opensap.common.Amount": {
+      "kind": "entity",
+      "abstract": true,
+      "elements": {
+        "currency": {
+          "@description": "{i18n>CurrencyCode.Description}",
+          "@title": "{i18n>Currency}",
+          "type": "Currency",
+          "target": "sap.common.Currencies",
+          "keys": [
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "opensap.common.Email": {
+      "kind": "type",
+      "@assert.format": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
+      "@title": "{i18n>email}",
+      "type": "cds.String",
+      "length": 255
+    },
+    "opensap.common.Gender": {
+      "kind": "type",
+      "@assert.enum": true,
+      "@description": "{i18n>gender}",
+      "@title": "{i18n>gender}",
+      "type": "cds.String",
+      "length": 1,
+      "enum": {
+        "male": {
+          "val": "M"
+        },
+        "female": {
+          "val": "F"
+        },
+        "nonBinary": {
+          "val": "N"
+        },
+        "noDisclosure": {
+          "val": "D"
+        },
+        "selfDescribe": {
+          "val": "S"
+        }
+      }
+    },
+    "opensap.common.PhoneNumber": {
+      "kind": "type",
+      "@assert.format": "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))",
+      "@title": "{i18n>phoneNumber}",
+      "type": "cds.String",
+      "length": 30
+    },
+    "opensap.common.Quantity": {
+      "kind": "entity",
+      "abstract": true,
+      "elements": {}
+    },
+    "sap.common": {
+      "kind": "context"
+    },
+    "sap.common.CodeList": {
+      "kind": "type",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        }
+      },
+      "$syntax": "aspect"
+    },
+    "sap.common.Countries": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>CountryCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "code1": {
+          "@Common.Label": "{i18n>code1}",
+          "@title": "{i18n>code1}",
+          "type": "cds.Integer"
+        },
+        "alpha3": {
+          "@Common.Label": "{i18n>alpha3}",
+          "@title": "{i18n>alpha3}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "iso": {
+          "@Common.Label": "{i18n>iso}",
+          "@title": "{i18n>iso}",
+          "type": "cds.String",
+          "length": 16
+        },
+        "region": {
+          "@Common.Label": "{i18n>region}",
+          "@title": "{i18n>region}",
+          "type": "cds.String",
+          "length": 20
+        },
+        "sub_region": {
+          "@Common.Label": "{i18n>sub_region}",
+          "@title": "{i18n>sub_region}",
+          "type": "cds.String",
+          "length": 40
+        },
+        "region_code": {
+          "@Common.Label": "{i18n>region_code}",
+          "@title": "{i18n>region_code}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "sub_region_code": {
+          "@Common.Label": "{i18n>sub_region_code}",
+          "@title": "{i18n>sub_region_code}",
+          "type": "cds.String",
+          "length": 3
+        },
+        "regions": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common_countries.Regions",
+          "on": [
+            {
+              "ref": [
+                "regions",
+                "country"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self",
+                "code"
+              ]
+            }
+          ]
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Countries_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Countries_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Countries_texts": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@odata.draft.enabled": false,
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CountryCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Currencies": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>CurrencyCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "symbol": {
+          "@title": "{i18n>CurrencySymbol}",
+          "type": "cds.String",
+          "length": 5
+        },
+        "numcode": {
+          "type": "cds.Integer"
+        },
+        "exponent": {
+          "type": "cds.Integer"
+        },
+        "minor": {
+          "type": "cds.String"
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Currencies_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Currencies_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Currencies_texts": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@odata.draft.enabled": false,
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>CurrencyCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.common.Languages": {
+      "kind": "entity",
+      "@UI.Identification": [
+        {
+          "Value": {
+            "=": "name"
+          }
+        }
+      ],
+      "@cds.autoexpose": true,
+      "@cds.odata.valuelist": true,
+      "@cds.persistence.skip": "if-unused",
+      "includes": [
+        "sap.common.CodeList"
+      ],
+      "elements": {
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": true,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "texts": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "sap.common.Languages_texts",
+          "on": [
+            {
+              "ref": [
+                "texts",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            }
+          ]
+        },
+        "localized": {
+          "type": "cds.Association",
+          "target": "sap.common.Languages_texts",
+          "on": [
+            {
+              "ref": [
+                "localized",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "localized",
+                "locale"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$user",
+                "locale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sap.common.Languages_texts": {
+      "kind": "entity",
+      "@cds.autoexpose": true,
+      "@odata.draft.enabled": false,
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        },
+        "name": {
+          "@title": "{i18n>Name}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 255
+        },
+        "descr": {
+          "@title": "{i18n>Description}",
+          "localized": false,
+          "type": "cds.String",
+          "length": 1000
+        },
+        "code": {
+          "@Common.Text": {
+            "=": "name"
+          },
+          "@odata.containment.ignore": true,
+          "@title": "{i18n>LanguageCode}",
+          "key": true,
+          "type": "cds.String",
+          "length": 14
+        }
+      }
+    },
+    "sap.common_countries": {
+      "kind": "context"
+    },
+    "sap.common_countries.Regions": {
+      "kind": "entity",
+      "elements": {
+        "country": {
+          "@Common.Label": "{i18n>country}",
+          "@title": "{i18n>country}",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "sub_code": {
+          "@Common.Label": "{i18n>sub_code}",
+          "@title": "{i18n>sub_code}",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "toCountries": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "sap.common.Countries",
+          "on": [
+            {
+              "ref": [
+                "toCountries",
+                "code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "$self",
+                "country"
+              ]
+            }
+          ]
+        },
+        "name": {
+          "@Common.FieldControl": {
+            "#": "Mandatory"
+          },
+          "@Common.Label": "{i18n>name}",
+          "@Search.defaultSearchElement": true,
+          "@title": "{i18n>name}",
+          "type": "cds.String",
+          "length": 80
+        },
+        "type": {
+          "@Common.Label": "{i18n>type}",
+          "@title": "{i18n>type}",
+          "type": "cds.String",
+          "length": 80
+        }
+      }
+    },
+    "temporal": {
+      "kind": "type",
+      "elements": {
+        "validFrom": {
+          "@cds.valid.from": true,
+          "@title": "{i18n>validFrom}",
+          "type": "cds.Timestamp"
+        },
+        "validTo": {
+          "@cds.valid.to": true,
+          "@title": "{i18n>validTo}",
+          "type": "cds.Timestamp"
+        }
+      },
+      "$syntax": "aspect"
+    }
+  },
+  "extensions": [
+    {
+      "annotate": "opensap.common.Amount",
+      "elements": {
+        "grossAmount": {
+          "@title": "{i18n>grossAmount}"
+        },
+        "netAmount": {
+          "@title": "{i18n>netAmount}"
+        },
+        "taxAmount": {
+          "@title": "{i18n>taxAmount}"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "flavor": "inferred",
+    "creator": "CDS Compiler v1.46.6"
+  },
+  "$version": "1.0"
+}
